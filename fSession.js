@@ -24,10 +24,16 @@
  * oSession =fSession(oPrevious_oSession); // This is how you pass in a previous fSession object to use
  */
 
+
 (function(undefined){
 
+    var console = {}
+    console.log = function(text) {
+        console_log('notice', text + '\n');
+    }
+
 	// Setting up the internal _fSession function
-	var _fSession =function(sSession, oSession) {
+	var _fSession = function(sSession, oSession) {
 	
 		return new _fSession.fn.init(sSession, oSession);
 	}
